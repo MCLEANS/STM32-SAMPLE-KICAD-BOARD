@@ -257,9 +257,6 @@ F 3 "~" H 10200 1100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9550 1000 9800 1000
-Wire Wire Line
-	9800 1000 10200 1000
-Connection ~ 9800 1000
 $Comp
 L power:GND #PWR020
 U 1 1 5E94B2E8
@@ -280,33 +277,6 @@ Wire Wire Line
 Connection ~ 10200 1300
 Wire Wire Line
 	10200 1300 10300 1300
-$Comp
-L power:+3.3VADC #PWR024
-U 1 1 5E94C52B
-P 10450 950
-F 0 "#PWR024" H 10600 900 50  0001 C CNN
-F 1 "+3.3VADC" H 10470 1093 50  0000 C CNN
-F 2 "" H 10450 950 50  0001 C CNN
-F 3 "" H 10450 950 50  0001 C CNN
-	1    10450 950 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10200 1000 10450 1000
-Wire Wire Line
-	10450 1000 10450 950 
-Connection ~ 10200 1000
-$Comp
-L power:+3.3VADC #PWR012
-U 1 1 5E94D744
-P 6450 2300
-F 0 "#PWR012" H 6600 2250 50  0001 C CNN
-F 1 "+3.3VADC" H 6470 2443 50  0000 C CNN
-F 2 "" H 6450 2300 50  0001 C CNN
-F 3 "" H 6450 2300 50  0001 C CNN
-	1    6450 2300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6250 2300 6450 2300
 $Comp
@@ -1198,4 +1168,33 @@ Wire Wire Line
 	6900 3000 6900 3500
 Wire Wire Line
 	6900 3500 7150 3500
+Text GLabel 10550 950  1    50   Input ~ 0
+VDDA
+Text GLabel 6450 2300 2    50   Input ~ 0
+VDDA
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5EB1E8E0
+P 10500 1300
+F 0 "J5" V 10400 1350 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 11000 1150 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10500 1300 50  0001 C CNN
+F 3 "~" H 10500 1300 50  0001 C CNN
+	1    10500 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9800 1000 10200 1000
+Connection ~ 9800 1000
+Wire Wire Line
+	10500 1000 10500 1100
+Wire Wire Line
+	10200 1000 10500 1000
+Connection ~ 10200 1000
+Wire Wire Line
+	10550 950  10550 1050
+Wire Wire Line
+	10550 1050 10600 1050
+Wire Wire Line
+	10600 1050 10600 1100
 $EndSCHEMATC
