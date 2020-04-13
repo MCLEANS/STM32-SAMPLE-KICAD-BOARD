@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:STM32_SAMPLE-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1197,4 +1198,66 @@ Wire Wire Line
 	10550 1050 10600 1050
 Wire Wire Line
 	10600 1050 10600 1100
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E94E8B0
+P 1950 3400
+F 0 "H1" H 2050 3446 50  0000 L CNN
+F 1 "MountingHole" H 2050 3355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1950 3400 50  0001 C CNN
+F 3 "~" H 1950 3400 50  0001 C CNN
+	1    1950 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E94ECAC
+P 1950 3650
+F 0 "H2" H 2050 3696 50  0000 L CNN
+F 1 "MountingHole" H 2050 3605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1950 3650 50  0001 C CNN
+F 3 "~" H 1950 3650 50  0001 C CNN
+	1    1950 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5E94F302
+P 1950 3900
+F 0 "H3" H 2050 3946 50  0000 L CNN
+F 1 "MountingHole" H 2050 3855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1950 3900 50  0001 C CNN
+F 3 "~" H 1950 3900 50  0001 C CNN
+	1    1950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5E94FB07
+P 1400 3800
+F 0 "#PWR012" H 1400 3550 50  0001 C CNN
+F 1 "GND" H 1405 3627 50  0000 C CNN
+F 2 "" H 1400 3800 50  0001 C CNN
+F 3 "" H 1400 3800 50  0001 C CNN
+	1    1400 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3800 1400 3750
+Wire Wire Line
+	1400 3400 1950 3400
+Wire Wire Line
+	1950 3650 1400 3650
+Connection ~ 1400 3650
+Wire Wire Line
+	1400 3650 1400 3400
+Wire Wire Line
+	1400 3750 1650 3750
+Wire Wire Line
+	1650 3750 1650 3900
+Connection ~ 1400 3750
+Wire Wire Line
+	1400 3750 1400 3650
+Wire Wire Line
+	1950 3900 1650 3900
 $EndSCHEMATC
